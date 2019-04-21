@@ -14,12 +14,12 @@
                 <Param id="startOnReset" value="true"/>
             </Block>
             <Block location="peri[0].div_8[0]" alias="" template="mxs40peripheralclock" version="1.0">
-                <Param id="intDivider" value="45"/>
+                <Param id="intDivider" value="31"/>
                 <Param id="fracDivider" value="0"/>
                 <Param id="startOnReset" value="true"/>
             </Block>
             <Block location="peri[0].div_8[1]" alias="" template="mxs40peripheralclock" version="1.0">
-                <Param id="intDivider" value="5"/>
+                <Param id="intDivider" value="1"/>
                 <Param id="fracDivider" value="0"/>
                 <Param id="startOnReset" value="true"/>
             </Block>
@@ -74,8 +74,8 @@
                 <Param id="ModeUser" value="CY_SCB_SPI_MASTER"/>
                 <Param id="SubModeUser" value="CY_SCB_SPI_MOTOROLA"/>
                 <Param id="SclkModeUser" value="CY_SCB_SPI_CPHA0_CPOL0"/>
-                <Param id="DataRate" value="1000"/>
-                <Param id="OvsFactor" value="16"/>
+                <Param id="DataRate" value="20000"/>
+                <Param id="OvsFactor" value="5"/>
                 <Param id="EnableInputFilter" value="false"/>
                 <Param id="EnableLateMisoSample" value="true"/>
                 <Param id="EnableFreeRunSclk" value="false"/>
@@ -328,19 +328,7 @@
             <Block location="srss[0].clock[0].lfclk[0]" alias="" template="mxs40lfclk" version="1.1">
                 <Param id="sourceClock" value="ilo"/>
             </Block>
-            <Block location="srss[0].clock[0].pathmux[0]" alias="" template="mxs40pathmux" version="1.0">
-                <Param id="sourceClock" value="imo"/>
-            </Block>
             <Block location="srss[0].clock[0].pathmux[1]" alias="" template="mxs40pathmux" version="1.0">
-                <Param id="sourceClock" value="imo"/>
-            </Block>
-            <Block location="srss[0].clock[0].pathmux[2]" alias="" template="mxs40pathmux" version="1.0">
-                <Param id="sourceClock" value="imo"/>
-            </Block>
-            <Block location="srss[0].clock[0].pathmux[3]" alias="" template="mxs40pathmux" version="1.0">
-                <Param id="sourceClock" value="imo"/>
-            </Block>
-            <Block location="srss[0].clock[0].pathmux[4]" alias="" template="mxs40pathmux" version="1.0">
                 <Param id="sourceClock" value="imo"/>
             </Block>
             <Block location="srss[0].clock[0].periclk[0]" alias="" template="mxs40periclk" version="1.0">
@@ -349,7 +337,7 @@
             <Block location="srss[0].clock[0].pll[0]" alias="" template="mxs40pll" version="1.0">
                 <Param id="lowFrequencyMode" value="false"/>
                 <Param id="configuration" value="auto"/>
-                <Param id="desiredFrequency" value="144.000"/>
+                <Param id="desiredFrequency" value="100.000"/>
                 <Param id="optimization" value="MinPower"/>
             </Block>
             <Block location="srss[0].clock[0].slowclk[0]" alias="" template="mxs40slowclk" version="1.0">
