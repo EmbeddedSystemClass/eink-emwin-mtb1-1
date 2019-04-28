@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_data>
+  <File wkspFile="./Source/stdio_user.h" installFile="psoc6sw-1.1/components/psoc6pdl/utilities/retarget_io/user/stdio_user.h" checksum="288C838A6AA2AE7569601EE9A3D532A87DE88EFD"/>
+  <File wkspFile="cy8c6xx7_cm4_dual.ld" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/linker/gcc/cy8c6xx7_cm4_dual.ld" checksum="6C8C7F9AC32522A21ECE64BE694800F79B0E8EAF"/>
+  <File wkspFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/system_psoc6_cm4.c" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/system_psoc6_cm4.c" checksum="B3800034C363591C13FC0B3040350334DA5252A3"/>
+  <File wkspFile="Source/main.c" installFile="Source/main.c" checksum="30A786B8E68B49325D8F179FF2DE7858329B11AD"/>
+  <File wkspFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/gcc/startup_psoc6_01_cm4.S" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/startup/gcc/startup_psoc6_01_cm4.S" checksum="F588109B80706A2549C1FE9D3E7A526A6F1B3CC9"/>
+  <File wkspFile="design.modus" installFile="design.modus" checksum="DD650CB0A6C945CB29B8C04D885E787D0F2C453F"/>
+  <File wkspFile="./Source/stdio_user.c" installFile="psoc6sw-1.1/components/psoc6pdl/utilities/retarget_io/user/stdio_user.c" checksum="ED8937E3E53E9AA7C85D0E68E78D8E4B532DAAC2"/>
+  <File wkspFile="./psoc6_01_cm0p_sleep_signed.elf" installFile="psoc6sw-1.1/components/psoc6pdl/devices/psoc6/cm0p/prebuilt/psoc6_01_cm0p_sleep_signed.elf" checksum="0DCF7490902EA561C76D68485932290555DD7E5D"/>
+  <artifact name="mainapp"/>
+</component_data>

@@ -64,6 +64,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include <stdio.h>
+#include <stdint.h>
 
 /* Number of demo pages */
 #define NUMBER_OF_DEMO_PAGES    6
@@ -118,9 +119,13 @@ void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
 {
     /* Copy the EmWin display buffer to imageBuffer*/
     LCD_CopyDisplayBuffer(imageBuffer, CY_EINK_FRAME_SIZE);
-
+    uint32 startCount = xTaskGetTickCount();
     /* Update the EInk display */
     Cy_EINK_ShowFrame(imageBufferCache, imageBuffer, updateMethod, powerCycle);
+
+    uint32 endCount = xTaskGetTickCount();
+
+    printf("Update Display Time = %d\n",endCount - startCount);
 
     /* Copy the EmWin display buffer to the imageBuffer cache*/
     LCD_CopyDisplayBuffer(imageBufferCache, CY_EINK_FRAME_SIZE);
