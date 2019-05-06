@@ -70,7 +70,7 @@
 
 /* Frame buffers */
 uint8 imageBufferCache[CY_EINK_FRAME_SIZE] = {0};
-uint8 imageBuffer[CY_EINK_FRAME_SIZE] = {0};
+//uint8 imageBuffer[CY_EINK_FRAME_SIZE] = {0};
 
 /* Reference to the bitmap image for the startup screen */
 extern GUI_CONST_STORAGE GUI_BITMAP bmCypressLogoFullColor_PNG_1bpp;
@@ -114,19 +114,31 @@ void (*demoPageArray[NUMBER_OF_DEMO_PAGES])(void) = {
 *  and only returns after the display refresh
 *
 *******************************************************************************/
+
+
 void UpdateDisplay(cy_eink_update_t updateMethod, bool powerCycle)
 {
+	updateMethod = CY_EINK_FULL_4STAGE;
+	updateMethod = CY_EINK_FULL_2STAGE;
+	//updateMethod = CY_EINK_PARTIAL;
+
     /* Copy the EmWin display buffer to imageBuffer*/
-    LCD_CopyDisplayBuffer(imageBuffer, CY_EINK_FRAME_SIZE);
+    //LCD_CopyDisplayBuffer(imageBuffer, CY_EINK_FRAME_SIZE);
 
     uint32_t startCount = xTaskGetTickCount();
     /* Update the EInk display */
-    Cy_EINK_ShowFrame(imageBufferCache, imageBuffer, updateMethod, powerCycle);
+    // prev new
+    Cy_EINK_ShowFrame(imageBufferCache, LCD_GetBuffer(), updateMethod, powerCycle);
     uint32_t endCount = xTaskGetTickCount();
     printf("Update Display Time = %d\n",(int)(endCount - startCount));
+    printf("Max Bytes Used = %X\n",GUI_ALLOC_GetMaxUsedBytes());
+    printf("Num Free = %X\n",GUI_ALLOC_GetNumFreeBytes());
+    printf("Num Used = %X\n",GUI_ALLOC_GetNumUsedBytes());
+
+    memcpy(imageBufferCache,LCD_GetBuffer(),CY_EINK_FRAME_SIZE);
 
     /* Copy the EmWin display buffer to the imageBuffer cache*/
-    LCD_CopyDisplayBuffer(imageBufferCache, CY_EINK_FRAME_SIZE);
+//    LCD_CopyDisplayBuffer(imageBufferCache, CY_EINK_FRAME_SIZE);
 }
 
 /*******************************************************************************

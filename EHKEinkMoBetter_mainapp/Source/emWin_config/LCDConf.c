@@ -114,6 +114,11 @@ static struct {
   _aPlain_0,
 }};
 
+uint8_t *LCD_GetBuffer()
+{
+	return _aPlain_0;
+}
+
 /*********************************************************************
 *
 *       Public code
@@ -184,6 +189,8 @@ int LCD_X_DisplayDriver(unsigned LayerIndex, unsigned Cmd, void * p) {
   int r;
   GUI_USE_PARA(LayerIndex);
   GUI_USE_PARA(p);
+
+  printf("Command = %d\n",Cmd);
 
   switch (Cmd) {
   case LCD_X_INITCONTROLLER: {

@@ -48,6 +48,8 @@ Purpose     : Display driver configuration file
 #include  <stdint.h>
     
 void LCD_CopyDisplayBuffer(uint8_t * destination, int count);
+uint8_t *LCD_GetBuffer();
+
 
 #endif /* LCDCONF_H */
 
