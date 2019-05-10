@@ -47,7 +47,7 @@
 * For the details of the E-INK display and library functions, see the code  
 * example document of CE218133 - PSoC 6 MCU E-INK Display with CapSense
 *******************************************************************************/
-
+#if 0
 /* Include Guard */
 #ifndef CY_EINK_FONTS_H
 #define CY_EINK_FONTS_H 
@@ -84,3 +84,5 @@ extern cy_eink_font_t cy_eink_font16By16_blackInWhite;
 
 #endif  /* CY_EINK_FONTS_H */
 /* [] END OF FILE */
+
+#endif

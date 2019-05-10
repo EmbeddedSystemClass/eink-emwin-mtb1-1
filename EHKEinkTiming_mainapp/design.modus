@@ -52,7 +52,7 @@
                 <Param id="SmCardRetryOnNack" value="false"/>
                 <Param id="IrdaPolarity" value="NON_INVERTING"/>
                 <Param id="inFlash" value="true"/>
-                <Param id="ApiMode" value="HIGH_LEVEL"/>
+                <Param id="ApiMode" value="LOW_LEVEL"/>
                 <Param id="IntrRxNotEmpty" value="false"/>
                 <Param id="IntrRxFull" value="false"/>
                 <Param id="IntrRxOverflow" value="false"/>

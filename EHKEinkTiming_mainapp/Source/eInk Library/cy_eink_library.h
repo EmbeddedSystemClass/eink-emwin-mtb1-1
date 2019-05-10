@@ -121,10 +121,13 @@ typedef enum
 void Cy_EINK_Start(int8_t temperature);
 bool Cy_EINK_Power(bool powerCtrl);
 
-/* Display update functions */
-void Cy_EINK_Clear(bool background, bool powerCycle);
 void Cy_EINK_ShowFrame(cy_eink_frame_t* prevFrame, cy_eink_frame_t* newFrame,
                        cy_eink_update_t updateType, bool powerCycle);
+
+#if 0
+/* Display update functions */
+void Cy_EINK_Clear(bool background, bool powerCycle);
+
 
 /* Frame buffer operations */
 void Cy_EINK_ImageToFrameBuffer(cy_eink_frame_t* frameBuffer, cy_eink_frame_t* image,
@@ -132,5 +135,6 @@ void Cy_EINK_ImageToFrameBuffer(cy_eink_frame_t* frameBuffer, cy_eink_frame_t* i
 void Cy_EINK_TextToFrameBuffer(cy_eink_frame_t* frameBuffer, char* string,
                             cy_eink_font_t* fontInfo, uint8_t* textCoordinates);
 
+#endif
 #endif /* CY_EINK_LIBRARY_H */
 /* [] END OF FILE */
